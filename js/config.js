@@ -11,21 +11,16 @@ let respecConfig = {
   //specStatus: "def",              // Vastgestelde versie
   //specStatus: "basis",            // Basis Document
 
-  //-- specType is verplicht bij alle andere dan BASIS
+
   specType: "IM",                 // Informatie Model
 
   //-- pubDomain is verplicht! (komt in de URL)
   //-- zie: https://geonovum.github.io/handleiding-tooling/ReSpec/#pubdomain
-  //-- TODO: vul pubDomain in
   pubDomain: "vth",
 
-  //-- license: voor de geldende gebruiksvoorwaarden. Default is cc-by.
-  //license: "cc-by-nd",            // bronvermelding, geen afgeleide werken (default)
-  //license: "cc0",                 // Public Domain Dedication
   license: "cc-by",                 // Attribution, met bronvermelding
 
-  //-- TODO shortName is verplicht! (komt in de URL: kies logische afkorting)
-  //-- Regel: shortName mag geen hoofdletters bevatten.
+  // komt in de URL: kies logische afkorting)
   shortName: "lith",
   
   //edDraftURI = De URI van de draft version. Deze wordt automatisch afgeleid van de github URI; maar kan hier overschreven worden. 
@@ -45,21 +40,13 @@ let respecConfig = {
   //-- Deze gebruiken we niet binnen Geonovum
   //prevVersion: "0.0.1",
 
-  //-- TODO: de namen van de Editor(s) / Redacteur(en)
-  //-- vul in: per Editor: name:, company:, companyURL:
   editors:
     [
       {
-        name: "Wilko Quak",
+        name: "Jacob Vos",
         company: "Geonovum",
         companyURL: "https://www.geonovum.nl",
-      }
-    ],
-
-  //-- de namen van de auteur(s) 
-  //-- vul in: per auteur: name:, company:, companyURL: 
-  authors:
-    [
+      },
       {
         name: "Wilko Quak",
         company: "Geonovum",
@@ -67,7 +54,21 @@ let respecConfig = {
       }
     ],
 
-  // TODO: Vul de github URL in.
+  authors:
+    [
+      {
+        name: "Jacob Vos",
+        company: "Geonovum",
+        companyURL: "https://www.geonovum.nl",
+      },
+      {
+        name: "Wilko Quak",
+        company: "Geonovum",
+        companyURL: "https://www.geonovum.nl",
+      }
+
+    ],
+
   // neem hier de URL van de github repository op waar het respec document in staat
   // dit zorgt voor het 'Doe mee:' onderdeel in het voorblad van de publicatie.
   github: "https://github.com/Geonovum/vth-lith",

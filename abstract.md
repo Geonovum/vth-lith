@@ -1,1 +1,1 @@
-TODO: vul in abstract.md een abstract in.
+Dit document beschrijf een logisch informatiemodel voor VTH.
