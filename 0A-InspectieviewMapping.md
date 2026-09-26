@@ -40,6 +40,13 @@
 | certificaatoudnieuw.csv    | wordt niet gemapt |
 
 
+## Betrokkene
+
+| cim-vth-flo    | lith           |
+| -------------- | -------------- |
+| Telefoonnummer | telefoonnummer |
+|                |                |
+
 ## NatuurlijkPersoon
 
 | cim-vth-flo         | lith                |
