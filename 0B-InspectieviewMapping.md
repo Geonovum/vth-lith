@@ -1,18 +1,11 @@
 # Mapping van aanlevering Inspectieview
 
-## Naamgevingsconventies
+Data van [[BaselineCSV]] wordt vertaald volgens de volgende mappings:
 
-- Een klasse schrijven we met UpperCamelCase
-- Een attribuutnaam schrijven we met lowerCamelCase
 
-## Mapping van cim-vth-flo naar lith
+## CSV bestanden in BaselineCSV
 
-| cim-vth-flo        | lith              |
-| ------------------ | ----------------- |
-| NATUURLIJK PERSOON | NatuurlijkPersoon |
-| BETROKKENE         | Betrokkene        |
-
-## Welke CSV bestanden mappen op welke klasse
+De volgende bestanden worden op de volgende klasses in lith gemapped:
 
 | csv bestand                | mapping           |
 | -------------------------- | ----------------- |
@@ -36,27 +29,15 @@
 | notitie.csv                |                   |
 | betrokkenpartij.csv        |                   |
 | betrokkenovertreders.csv   |                   |
-| certificaat.csv            | wordt niet gemapt |
-| certificaatoudnieuw.csv    | wordt niet gemapt |
+| certificaat.csv            | geen mapping     |
+| certificaatoudnieuw.csv    | geen mapping      |
+|                            |                   |
 
 
-## Betrokkene
+## Vertaling van `natuurlijkpersoon.csv`
 
-| cim-vth-flo    | lith           |
-| -------------- | -------------- |
-| Telefoonnummer | telefoonnummer |
-|                |                |
-
-## NatuurlijkPersoon
-
-| cim-vth-flo         | lith                |
-| ------------------- | ------------------- |
-| Burgerservicenummer | burgerservicenummer |
-| Naam                | naam                |
-| Geslachtsaanduiding | geslachtsaanduiding |
-| Overlijdensdatum    | overlijdensdatum    |
-
-Vertaling van de kenmerken in `natuurlijkpersoon.csv` naar lith:
+Beslispunten:
+- voornaam, voorletters, tussenvoegsels, achternaam zouden met een transformatie op naam gemapped kunnen worden
 
 Bijzonderheden:
 - wanneer `wa_landcode` = `NL` dan adresBinnenland anders adresBuitenland.

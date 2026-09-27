@@ -103,7 +103,14 @@ let respecConfig = {
       status: "Definitief",
       publisher: "Geonovum",
       date: "2024-06-13"
-    }
+    },
+    BaselineCSV: {
+      id: "BaselineCSV",
+      title: "Baseline CSV - koppelvlak beschrijving voor Inspectieview bronnen t.b.v. de Aansluitvoorziening Inspectieviews 5.0",
+      status: "Definitief",
+      publisher: "Geonovum",
+      date: "2026-07-17"
+    },
   }
 };
 
