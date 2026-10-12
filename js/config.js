@@ -104,11 +104,18 @@ let respecConfig = {
       publisher: "Geonovum",
       date: "2024-06-13"
     },
+    CIm_VTH_FLo: {
+      id: "CIm-VTH-FLo",
+      title: "Conceptueel Informatiemodel VTH Fysieke Leefomgeving 1.0.1",
+      href: "https://docs.geostandaarden.nl/vth/def-im-cim-vth-flo-20260724/",
+      status: "Vastgesteld",
+      publisher: "Geonovum",
+      date: "2026-06-24"
+    },
     BaselineCSV: {
       id: "BaselineCSV",
       title: "Baseline CSV - koppelvlak beschrijving voor Inspectieview bronnen t.b.v. de Aansluitvoorziening Inspectieviews 5.0",
       status: "Definitief",
-      publisher: "Geonovum",
       date: "2026-07-17"
     },
   }
