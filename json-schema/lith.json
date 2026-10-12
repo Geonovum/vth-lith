@@ -1,0 +1,153 @@
+{
+  "$comment" : "lith - version 0.1 / 20251224 by Imvertor Nightly-build.0 variant plainjson",
+  "$schema" : "https://json-schema.org/draft/2019-09/schema",
+  "$reqs" : [ "/req/plain", "/req/by-reference-link-object", "/req/codelists-literal", "/req/entitytype" ],
+  "$defs" : {
+    "AdresBinnenland" : {
+      "$anchor" : "AdresBinnenland",
+      "type" : "object",
+      "properties" : {
+        "entityType" : {
+          "type" : "string"
+        },
+        "naamOpenbareRuimte" : {
+          "type" : "string"
+        },
+        "huisnummer" : {
+          "type" : "integer"
+        },
+        "huisletter" : {
+          "type" : "string"
+        },
+        "huisnummertoevoeging" : {
+          "type" : "string"
+        },
+        "postcode" : {
+          "type" : "string"
+        },
+        "naamWoonplaats" : {
+          "type" : "string"
+        },
+        "BAG-nummeraanduiding-Id" : {
+          "type" : "string"
+        }
+      },
+      "required" : [ "entityType", "naamOpenbareRuimte", "huisnummer", "naamWoonplaats", "BAG-nummeraanduiding-Id" ]
+    },
+    "AdresBuitenland" : {
+      "$anchor" : "AdresBuitenland",
+      "type" : "object",
+      "properties" : {
+        "entityType" : {
+          "type" : "string"
+        },
+        "adresBuitenland1" : {
+          "type" : "string"
+        },
+        "adresBuitenland2" : {
+          "type" : "string"
+        },
+        "adresBuitenland3" : {
+          "type" : "string"
+        },
+        "land" : {
+          "type" : "string"
+        }
+      },
+      "required" : [ "entityType", "land" ]
+    },
+    "Adresaanduidingsoort" : {
+      "$anchor" : "Adresaanduidingsoort",
+      "type" : "string",
+      "enum" : [ "correspondentie-adres", "verblijfs- of vestigingsadres" ]
+    },
+    "Betrokkene" : {
+      "$anchor" : "Betrokkene",
+      "type" : "object",
+      "properties" : {
+        "entityType" : {
+          "type" : "string"
+        },
+        "adresaanduidingsoort" : {
+          "$ref" : "#/$defs/Adresaanduidingsoort"
+        },
+        "adresBinnenland" : {
+          "$ref" : "#/$defs/AdresBinnenland"
+        },
+        "adresBuitenland" : {
+          "$ref" : "#/$defs/AdresBuitenland"
+        },
+        "postadresBinnenland" : {
+          "$ref" : "#/$defs/PostadresBinnenland"
+        },
+        "telefoonnummer" : {
+          "type" : "string"
+        }
+      },
+      "required" : [ "entityType" ]
+    },
+    "Geslachtsaanduiding" : {
+      "$anchor" : "Geslachtsaanduiding",
+      "type" : "string",
+      "enum" : [ "man", "onbekend", "vrouw" ]
+    },
+    "NatuurlijkPersoon" : {
+      "$anchor" : "NatuurlijkPersoon",
+      "allOf" : [ {
+        "$ref" : "#/$defs/Betrokkene"
+      }, {
+        "type" : "object",
+        "properties" : {
+          "burgerservicenummer" : {
+            "type" : "string"
+          },
+          "naam" : {
+            "type" : "string"
+          },
+          "geslachtsaanduiding" : {
+            "$ref" : "#/$defs/Geslachtsaanduiding"
+          },
+          "overlijdendatum" : {
+            "type" : "string",
+            "format" : "date",
+            "pattern" : "^\\d{4}-\\d{2}-\\d{2}$"
+          },
+          "voornaam" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ "naam", "geslachtsaanduiding", "voornaam" ]
+      } ]
+    },
+    "PostadresBinnenland" : {
+      "$anchor" : "PostadresBinnenland",
+      "type" : "object",
+      "properties" : {
+        "entityType" : {
+          "type" : "string"
+        },
+        "postadrestype" : {
+          "$ref" : "#/$defs/Postadrestype"
+        },
+        "postbusOfAntwoordnummer" : {
+          "type" : "integer"
+        },
+        "postcode" : {
+          "type" : "string"
+        },
+        "naamWoonplaats" : {
+          "type" : "string"
+        }
+      },
+      "required" : [ "entityType", "postadrestype", "postbusOfAntwoordnummer", "postcode", "naamWoonplaats" ]
+    },
+    "Postadrestype" : {
+      "$anchor" : "Postadrestype",
+      "type" : "string",
+      "enum" : [ "Antwoordnummer", "Postbusnummer" ]
+    }
+  },
+  "type": "object", "properties": {
+    "adres" : { "$ref": "#/$defs/PostadresBinnenland" }
+  }
+}

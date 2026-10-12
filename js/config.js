@@ -104,6 +104,14 @@ let respecConfig = {
       publisher: "Geonovum",
       date: "2024-06-13"
     },
+    UML2JSON: {
+      id: "UML2JSON",
+      title: "Best Practice for OGC - UML to JSON Encoding Rules",
+      href: "https://geonovum.github.io/uml2json/document.html",
+      status: "Definitief",
+      publisher: "Open Geospatial Consortium",
+      date: "2024-10-21"
+    },
     CIm_VTH_FLo: {
       id: "CIm-VTH-FLo",
       title: "Conceptueel Informatiemodel VTH Fysieke Leefomgeving 1.0.1",
