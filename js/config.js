@@ -107,7 +107,7 @@ let respecConfig = {
     UML2JSON: {
       id: "UML2JSON",
       title: "Best Practice for OGC - UML to JSON Encoding Rules",
-      href: "https://geonovum.github.io/uml2json/document.html",
+      href: "https://docs.ogc.org/bp/24-017r1.html",
       status: "Definitief",
       publisher: "Open Geospatial Consortium",
       date: "2024-10-21"
